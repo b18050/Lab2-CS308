@@ -4,6 +4,7 @@ positive number. */
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <complex.h>
 /* Main function starts here taking input from command line*/
 int main(int argc, char* argv[]) {
 	
@@ -15,12 +16,14 @@ int main(int argc, char* argv[]) {
 	int input = atoi(argv[1]);
 
 	if(input < 0){
-		printf("Not a valid number");
-		exit(-1);
+		double complex num = input + 0.0;
+		double complex s = csqrt(num);
+		printf("%.2f + %.2fi\n", creal(s), cimag(s));
 	}
-
-	printf("Sqrt of %d is %f\n",input,sqrt(input));
-	printf("End of program. Exiting.");
+	else {
+		printf("Sqrt of %d is %f\n",input,sqrt(input));
+		printf("End of program. Exiting.");
+	}
 	return(0);
 
 } // end main
