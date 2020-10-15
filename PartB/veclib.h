@@ -2,7 +2,7 @@
 #define VECLIB_H
 #define DIM 4
 
-#include<math.h>
+#include <math.h>
 // vector type
 typedef float vector[DIM];
 
@@ -26,11 +26,13 @@ float sqroot(float number);
 //////////////////////////////////////////////////////////
 
 void print(vector vec_a) {
+	printf("\n");
 	printf("[");
 	for (int i=0;i<DIM;i++)
 		printf("%f ",vec_a[i]);
 	printf("]");
     printf("\n");
+	printf("\n");
 }
 //////////////////////////////////////////////////////////
 
