@@ -1,6 +1,8 @@
-#ifndef HEADER_FILE
-#define HEADER_FILE
+#ifndef VECLIB_H
+#define VECLIB_H
 #define DIM 4
+
+#include<math.h>
 // vector type
 typedef float vector[DIM];
 
@@ -14,9 +16,12 @@ void eleProd(vector vec_a, vector vec_b, vector vector_c);
 // difference of two vectors
 void diff(vector vec_a, vector vec_b, vector vector_c);
 // dot product
-void dotprod(vector vec_a, vector vec_b, vector vector_c);
+float dotprod(vector vec_a, vector vec_b);
 // add other functions as needed
 
+float norm(vector vec_a, vector vec_b);
+
+float sqroot(float number);
 
 //////////////////////////////////////////////////////////
 
@@ -25,16 +30,25 @@ void print(vector vec_a) {
 	for (int i=0;i<DIM;i++)
 		printf("%f ",vec_a[i]);
 	printf("]");
+    printf("\n");
 }
 //////////////////////////////////////////////////////////
 
 void input(vector vec_a) {
-	printf("Enter all four dimensions of given vector");
+	printf("Enter all four dimensions of given vector: ");
 	for (int i=0;i<DIM;i++)
-		scanf("%f ",&vec_a[i]);
+		scanf("%f",&vec_a[i]);
+}
+
+float sqroot(float number)
+{
+    return sqrt(number);
 }
 
 ///////////////////////////////////////////////////////////
 
 
 #endif
+
+   
+
