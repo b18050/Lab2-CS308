@@ -2,6 +2,7 @@
 //#include <math.h>
 #include <stdio.h>
 
+// this calculates dot product of 2 vectors
 float dotprod(vector vec_a, vector vec_b){
 	float product = 0;  
     // Loop to calculate dot product 
