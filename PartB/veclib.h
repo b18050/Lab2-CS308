@@ -9,6 +9,8 @@ typedef float vector[DIM];
 // functions
 // print vector
 void print(vector vec_a);
+// input vector
+void input(vector vec_a);
 // vector addition
 void add(vector vec_a, vector vec_b, vector vec_c);
 // elementwise product
@@ -18,9 +20,9 @@ void diff(vector vec_a, vector vec_b, vector vector_c);
 // dot product
 float dotprod(vector vec_a, vector vec_b);
 // add other functions as needed
-
+// norm of two vectors
 float norm(vector vec_a, vector vec_b);
-
+// function to find the sqaure root of a number
 float sqroot(float number);
 
 //////////////////////////////////////////////////////////
